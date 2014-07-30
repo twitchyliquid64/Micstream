@@ -23,7 +23,7 @@ type HelloPacket struct {
 
 
 func pageHandler(ctx *web.Context, name string){
-	data, err := ioutil.ReadFile("static/test.html")
+	data, err := ioutil.ReadFile("static/index.html")
 	if err != nil{
 		log.Println(err)
 		return
