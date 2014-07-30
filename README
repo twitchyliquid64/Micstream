@@ -1,0 +1,22 @@
+This library allows a webpage to implement audio calls or other voice
+chat functionality.
+
+To use, simply include the micstream.js file (located in static/js)
+in your webpage, along with the dependency resampler.js (located in static/js).
+
+Then, all you need to do is create the object:
+
+
+var micstream = new MicStream(workOutWSURI() +"/connect/testconn", false, true, true, true);
+
+
+The syntax is:
+
+MicStream(<websocketURI>, <enable Microphone Transmission>, <enable reciever>, <enable compression>, <enable debug>)
+
+
+
+
+
+The server side has a single responsibility - relay binary websocket frames
+from the two ends. The demo (written in Golang) does this.
